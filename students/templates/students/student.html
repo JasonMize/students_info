@@ -1,0 +1,19 @@
+{% extends "students/base.html" %}
+
+{% block title %}
+    {{ block.super }}
+    - Student
+{% endblock title %}
+
+{% block content %}
+    <h2>
+        {{ students.name }}
+    </h2>
+    {% if students.bio %}
+        Bio: <pre>{{ students.bio }}</pre>
+    {% endif %}
+    GitHub: <pre><a href="{{ students.github_url }}">{{ students.github_url }}</a></pre>
+    Created: <pre>{{ students.created }}</pre>
+{% endblock content %}
+
+

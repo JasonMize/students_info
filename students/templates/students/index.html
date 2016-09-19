@@ -6,6 +6,15 @@
 {% endblock title %}
 
 {% block content %}
-    Hello there, beatutiful. 
+
+    <ul class="list-group">
+        {% for student in students %}
+            <li class="list-group-item">
+                    <a href="{{student.get_absolute_url}}">
+                        {{student.name}}               
+                    </a>
+            </li>
+        {% endfor %}
+    </ul>
 
 {% endblock content %}
